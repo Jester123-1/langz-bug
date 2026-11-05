@@ -18,8 +18,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Create Gradle Wrapper
-      run: gradle wrapper
+    - name: Generate Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.2
 
     - name: Build APK
       run: ./gradlew assembleDebug
