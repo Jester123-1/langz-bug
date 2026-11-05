@@ -12,9 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <EditText
+        android:id="@+id/delay"
+        android:hint="Delay (ms) - isi 0 buat brutal"
+        android:inputType="number"
+        android:text="50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/wa_bisnis"
+        android:text="Tembak WA Business (W4B)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/kirim"
-        android:text="TEMBAK BUG"
+        android:text="EKSEKUSI BUG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>
