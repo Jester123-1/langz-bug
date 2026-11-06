@@ -1,80 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F9F4E8">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:gravity="center_horizontal"
+    <ImageView
+        android:src="@drawable/bg_ui"
+        android:scaleType="fitCenter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:text="WELCOME"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:background="@drawable/bg_kuning"
-            android:layout_gravity="start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="520dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp" />
 
-        <VideoView
-            android:id="@+id/video_animasi"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_kotak"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"/>
-
-        <ImageView
-            android:src="@drawable/foto_tengah"
-            android:background="@drawable/bg_kotak"
-            android:scaleType="centerCrop"
-            android:padding="4dp"
-            android:layout_marginTop="-40dp"
-            android:layout_width="120dp"
-            android:layout_height="120dp"/>
-
-        <Button
-            android:id="@+id/btn_login"
-            android:text="ENTER TO LOGIN ->"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/bg_biru"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"/>
-
-        <LinearLayout
-            android:id="@+id/form_input"
-            android:orientation="vertical"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            
-            <EditText
-                android:id="@+id/target"
-                android:hint="Nomor target (62xxx)"
-                android:inputType="phone"
-                android:background="@drawable/bg_kotak"
-                android:padding="12dp"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <Button
-                android:id="@+id/kirim"
-                android:text="EKSEKUSI BUG"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:background="@drawable/bg_kuning"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"/>
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+</RelativeLayout>
