@@ -11,30 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:text="WELCOME"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:textColor="#000000"
-                android:background="@drawable/bg_kuning"
-                android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <ImageView
-                android:src="@drawable/foto_tengah"
-                android:background="#000000"
-                android:padding="2dp"
-                android:layout_alignParentEnd="true"
-                android:layout_width="60dp"
-                android:layout_height="60dp"/>
-        </RelativeLayout>
+        <TextView
+            android:text="WELCOME"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:background="@drawable/bg_kuning"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <VideoView
             android:id="@+id/video_animasi"
@@ -52,24 +38,13 @@
             android:layout_width="120dp"
             android:layout_height="120dp"/>
 
-        <TextView
-            android:text="INFO MIYABI\nAPK MIYABI AKAN SELALU MEMBERIKAN UPDATE BAGUS DAN BUG WORK. SUPPORT KAMI LEWAT SALURAN WA & TELE."
-            android:padding="20dp"
-            android:gravity="center"
-            android:textSize="12sp"
-            android:textColor="#000000"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_kotak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <Button
             android:id="@+id/btn_login"
             android:text="ENTER TO LOGIN ->"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:background="@drawable/bg_biru"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"/>
 
@@ -79,6 +54,7 @@
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            
             <EditText
                 android:id="@+id/target"
                 android:hint="Nomor target (62xxx)"
@@ -88,6 +64,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
             <Button
                 android:id="@+id/kirim"
                 android:text="EKSEKUSI BUG"
@@ -98,24 +75,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"/>
         </LinearLayout>
-
-        <Button
-            android:text="APK BUG FREE CLIK"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:background="@drawable/bg_kotak"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
-
-        <Button
-            android:text="HUBUNGI KAMI"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:background="@drawable/bg_kuning"
-            android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="50dp"/>
 
     </LinearLayout>
 </ScrollView>
