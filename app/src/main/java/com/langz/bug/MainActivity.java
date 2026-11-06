@@ -38,25 +38,24 @@ public class MainActivity extends AppCompatActivity {
         formInput = findViewById(R.id.form_input);
         videoAnimasi = findViewById(R.id.video_animasi);
 
-        // SETUP VIDEO MUTER OTOMATIS (Pastiin lu udah upload video_bug.mp4 di folder raw)
+        // SETUP VIDEO
         String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.video_bug;
         Uri uri = Uri.parse(videoPath);
         videoAnimasi.setVideoURI(uri);
         videoAnimasi.start();
 
-        // Biar video muter terus
         videoAnimasi.setOnPreparedListener(mp -> {
             mp.setLooping(true); 
         });
 
-        // Tombol Enter to Login
+        // Tombol Login
         btnLogin.setOnClickListener(v -> {
             formInput.setVisibility(View.VISIBLE);
             btnLogin.setVisibility(View.GONE);
-            Toast.makeText(this, "Login Berhasil! Isi form di atas.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show();
         });
 
-        // Tombol Eksekusi Bug
+        // Tombol Eksekusi
         kirim.setOnClickListener(v -> {
             String nomor = target.getText().toString().trim();
             if (nomor.isEmpty()) {
@@ -65,14 +64,20 @@ public class MainActivity extends AppCompatActivity {
             }
 
             long jeda = 50;
-            try { jeda = Long.parseLong(delayInput.getText().toString()); } catch (Exception e) {}
+            // CEK: Kalau delayInput atau modeBug nggak ada di layout baru, ini bakal error.
+            // Jadi kita pake try-catch biar aman.
+            try { 
+                jeda = Long.parseLong(delayInput.getText().toString()); 
+            } catch (Exception e) {}
 
-            String paketWA = waBisnis.isChecked() ? "com.whatsapp.w4b" : "com.whatsapp";
-            int selectedMode = modeBug.getCheckedRadioButtonId();
+            String paketWA = waBisnis != null && waBisnis.isChecked() ? "com.whatsapp.w4b" : "com.whatsapp";
+            
             String mode = "FC";
-
-            if (selectedMode == R.id.mode_lock) mode = "LOCK";
-            else if (selectedMode == R.id.mode_delay) { mode = "DELAY"; jeda = 0; }
+            if (modeBug != null) {
+                int selectedMode = modeBug.getCheckedRadioButtonId();
+                if (selectedMode == R.id.mode_lock) mode = "LOCK";
+                else if (selectedMode == R.id.mode_delay) { mode = "DELAY"; jeda = 0; }
+            }
 
             eksekusiBug(nomor, paketWA, jeda, mode);
         });
