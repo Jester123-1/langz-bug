@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- HEADER -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -37,7 +36,6 @@
                 android:layout_height="60dp"/>
         </RelativeLayout>
 
-        <!-- VIDEO -->
         <VideoView
             android:id="@+id/video_animasi"
             android:layout_marginTop="20dp"
@@ -45,7 +43,6 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"/>
 
-        <!-- FOTO TENGAH -->
         <ImageView
             android:src="@drawable/foto_tengah"
             android:background="@drawable/bg_kotak"
@@ -55,7 +52,6 @@
             android:layout_width="120dp"
             android:layout_height="120dp"/>
 
-        <!-- INFO BOX -->
         <TextView
             android:text="INFO MIYABI\nAPK MIYABI AKAN SELALU MEMBERIKAN UPDATE BAGUS DAN BUG WORK. SUPPORT KAMI LEWAT SALURAN WA & TELE."
             android:padding="20dp"
@@ -67,7 +63,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <!-- TOMBOL LOGIN -->
         <Button
             android:id="@+id/btn_login"
             android:text="ENTER TO LOGIN ->"
@@ -78,7 +73,6 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"/>
 
-        <!-- FORM INPUT (Disembunyiin) -->
         <LinearLayout
             android:id="@+id/form_input"
             android:orientation="vertical"
@@ -105,7 +99,6 @@
                 android:layout_height="60dp"/>
         </LinearLayout>
 
-        <!-- TOMBOL BAWAH -->
         <Button
             android:text="APK BUG FREE CLIK"
             android:textStyle="bold"
