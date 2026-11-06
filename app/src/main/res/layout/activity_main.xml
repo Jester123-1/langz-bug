@@ -2,60 +2,58 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F9F4E8">
+    android:background="#FDE047">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="20dp"
+        android:padding="24dp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Header WELCOME -->
         <TextView
             android:text="WELCOME"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:textColor="#000000"
-            android:background="#FFD700"
+            android:background="@drawable/kotak_neubrutalism"
+            android:elevation="8dp" 
             android:layout_gravity="start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <!-- Video Animasi -->
         <VideoView
             android:id="@+id/video_animasi"
-            android:layout_marginTop="20dp"
-            android:background="#000000"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/kotak_neubrutalism"
             android:layout_width="match_parent"
             android:layout_height="200dp"/>
 
-        <!-- Foto Madara Bulat -->
         <ImageView
             android:src="@drawable/foto_tengah"
-            android:background="@drawable/gambar_bulat"
+            android:background="@drawable/kotak_neubrutalism"
             android:scaleType="centerCrop"
             android:padding="4dp"
-            android:layout_marginTop="-40dp"
+            android:elevation="10dp"
+            android:layout_marginTop="-30dp"
             android:layout_width="120dp"
             android:layout_height="120dp"/>
 
-        <!-- Tombol ENTER TO LOGIN -->
         <Button
             android:id="@+id/btn_login"
             android:text="ENTER TO LOGIN ->"
             android:textStyle="bold"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:background="@drawable/btn_biru"
+            android:elevation="8dp"
             android:layout_marginTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"/>
 
-        <!-- Form Input (Muncul pas tombol login dipencet) -->
         <LinearLayout
             android:id="@+id/form_input"
             android:orientation="vertical"
@@ -67,14 +65,22 @@
                 android:id="@+id/target"
                 android:hint="Nomor target (62xxx)"
                 android:inputType="phone"
+                android:background="@drawable/kotak_neubrutalism"
+                android:padding="12dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <Button
                 android:id="@+id/kirim"
                 android:text="EKSEKUSI BUG"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@drawable/btn_biru"
+                android:elevation="8dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="60dp"/>
         </LinearLayout>
 
     </LinearLayout>
