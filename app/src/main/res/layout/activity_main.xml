@@ -38,7 +38,6 @@
             android:layout_marginTop="-50dp" 
             android:layout_width="120dp"
             android:layout_height="120dp"/>
-        <!-- Catatan: -50dp itu biar gambarnya naik nutupin video dikit -->
 
         <!-- 3. KOTAK INFO -->
         <TextView
